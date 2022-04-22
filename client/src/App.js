@@ -1,16 +1,16 @@
-import React from 'react';
-import {BrowserRouter as Router} from "react-router-dom";
-import {useRoutes} from "./routes";
-import 'materialize-css';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import Header from "./pages/header/Header";
+import { useRoutes } from "./routes";
+import "materialize-css";
 
 function App() {
-    const routes = useRoutes(true);
+  const routes = useRoutes(false);
   return (
-      <Router>
-          <div className="container">
-              {routes}
-          </div>
-      </Router>
+    <Router>
+      <Header />
+      <div className="container">{routes}</div>
+    </Router>
   );
 }
 
